@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="wrap" id="move" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="box1" id="box" draggable="true" ondragstart="drag(event)">
+
+            <small>Main window</small>
+            <i class="fas fa-minus"></i>
+            <i class="fas fa-window-maximize"></i>
+            <i class="fas fa-window-close"></i>
+            
+            <i class="fas fa-caret-up"></i>
+            <i class="fas fa-caret-down"></i>
+            <i class="fas fa-caret-left"></i>
+            <i class="fas fa-caret-right"></i>
+       
+            <div class="view">
+
+            </div>
+        </div>
+       
+    </div>
+    <script src="script.js"></script>
+
+
+    <!-- <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+    </div> -->
+</body>
+
+</html>
