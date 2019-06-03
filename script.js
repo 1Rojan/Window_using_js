@@ -42,50 +42,49 @@ function dragElement(elmnt) {
   }
 }
 
+/* arrow keys to move the window */
+// var upkey = document.querySelector('.fa-caret-up');
+// var downkey = document.querySelector('.fa-caret-down');
+// var leftkey = document.querySelector('.fa-caret-left');
+// var rightkey = document.querySelector('.fa-caret-right');
 
+// upkey.addEventListener('click', function () {
 
-var upkey = document.querySelector('.fa-caret-up');
-var downkey = document.querySelector('.fa-caret-down');
-var leftkey = document.querySelector('.fa-caret-left');
-var rightkey = document.querySelector('.fa-caret-right');
+//   var target = this.parentNode;
+//   var curTop = getComputedStyle(target).top;
+//   var newTop = parseInt(curTop) - 10 + 'px';
+//   target.style.top = newTop;
 
-upkey.addEventListener('click', function () {
+// })
 
-  var target = this.parentNode;
-  var curTop = getComputedStyle(target).top;
-  var newTop = parseInt(curTop) - 10 + 'px';
-  target.style.top = newTop;
+// downkey.addEventListener('click', function () {
 
-})
+//   var target = this.parentNode;
+//   var curTop = getComputedStyle(target).top;
+//   var newTop = parseInt(curTop) + 10 + 'px';
+//   target.style.top = newTop;
 
-downkey.addEventListener('click', function () {
+// })
 
-  var target = this.parentNode;
-  var curTop = getComputedStyle(target).top;
-  var newTop = parseInt(curTop) + 10 + 'px';
-  target.style.top = newTop;
+// leftkey.addEventListener('click', function () {
 
-})
+//   var target = this.parentNode;
+//   var curTop = getComputedStyle(target).left;
+//   var newTop = parseInt(curTop) - 10 + 'px';
+//   target.style.left = newTop;
 
-leftkey.addEventListener('click', function () {
+// })
 
-  var target = this.parentNode;
-  var curTop = getComputedStyle(target).left;
-  var newTop = parseInt(curTop) - 10 + 'px';
-  target.style.left = newTop;
+// rightkey.addEventListener('click', function () {
 
-})
+//   var target = this.parentNode;
+//   var curTop = getComputedStyle(target).left;
+//   var newTop = parseInt(curTop) + 10 + 'px';
+//   target.style.left = newTop;
 
-rightkey.addEventListener('click', function () {
+// })
 
-  var target = this.parentNode;
-  var curTop = getComputedStyle(target).left;
-  var newTop = parseInt(curTop) + 10 + 'px';
-  target.style.left = newTop;
-
-})
-
-// Drag and drop part
+// not used Drag and drop part
 
 // function allowDrop(ev) {
 //   ev.preventDefault();
@@ -101,19 +100,24 @@ rightkey.addEventListener('click', function () {
 //   ev.target.appendChild(document.getElementById(data));
 // }
 
-//drag and drop part
+
+/*drag and drop part */
 
 var minimize = document.querySelector('.fa-minus');
-
 minimize.addEventListener('click', function () {
 
   var target = this.parentNode;
-  var min = getComputedStyle(target).height;
+  // var min = getComputedStyle(target).height;
   // var newTop = parseInt(min) - 280 + 'px';
+  
   target.style.height = 5 + '%';
   target.querySelector('.view').style.display='none';
-  target.querySelector('.view').style.background;
-  target.style.background = 'silver';
+  target.style.background = '#373b42';
+  target.style.top= 90 + '%' ;
+  target.style.width = 20 + '%';
+  document.querySelector('.fa-compress').style.display='none';
+  document.querySelector('.fa-window-maximize').style.display='inline';
+
   // debugger;
 })
 
@@ -128,8 +132,28 @@ maximize.addEventListener('click', function () {
   target.style.left=0;
   target.style.background = 'linear-gradient(to right, #81d8f6 , #2867be)';
   target.querySelector('.view').style.display='block';
-
+  this.style.display='none' ;
+  document.querySelector('.fa-compress').removeAttribute('style');//remove inline css
+  
 })
+
+//restore
+var restore = document.querySelector('.fa-compress');
+restore.addEventListener('click',function(){
+  var target = this.parentNode;
+  var max = getComputedStyle(target).height;
+  target.style.height = 100 + '%';
+  var maximize = getComputedStyle(target).width;
+  target.style.width = 50 + '%';
+  target.style.height = 50 + '%';
+  target.style.top=10 + 'px';
+  target.style.left=10 + 'px';
+  target.style.background = 'linear-gradient(to right, #81d8f6 , #2867be)';
+  this.style.display='none' ;
+  document.querySelector('.fa-window-maximize').removeAttribute('style');
+  
+})
+
 
 var cross = document.querySelector('.fa-window-close');
 
@@ -139,3 +163,18 @@ cross.addEventListener('click', function () {
   var del = getComputedStyle(target).display;
   target.style.display = "none";
 })
+
+
+
+/* the pop up menu part */
+
+var popUp = document.querySelector('.view');
+
+popUp.addEventListener('contextmenu',function(){
+
+  
+
+})
+
+
+
