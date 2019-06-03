@@ -137,7 +137,7 @@ maximize.addEventListener('click', function () {
   
 })
 
-//restore
+/* Restore part */
 var restore = document.querySelector('.fa-compress');
 restore.addEventListener('click',function(){
   var target = this.parentNode;
@@ -155,6 +155,7 @@ restore.addEventListener('click',function(){
 })
 
 
+/* window close part */
 var cross = document.querySelector('.fa-window-close');
 
 cross.addEventListener('click', function () {
@@ -168,11 +169,30 @@ cross.addEventListener('click', function () {
 
 /* the pop up menu part */
 
-var popUp = document.querySelector('.view');
-
+var popUp = document.querySelector('body');
 popUp.addEventListener('contextmenu',function(){
 
-  
+ var input = document.createElement('input');
+input.type = 'file';
+
+input.onchange = e => { 
+
+   // getting a hold of the file reference
+   var file = e.target.files[0]; 
+
+   // setting up the reader
+   var reader = new FileReader();
+   reader.readAsDataURL(file); // this is reading as data url
+
+   // here we tell the reader what to do when it's done reading...
+   reader.onload = readerEvent => {
+      var content = readerEvent.target.result; // this is the content!
+      document.querySelector('body').style.backgroundImage = 'url('+ content +')';
+   }
+
+}
+
+input.click();
 
 })
 

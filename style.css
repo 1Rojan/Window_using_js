@@ -1,7 +1,9 @@
 body{
-    background:#9eacc1; 
+    background:#c2d3ed; 
     width: 70%;
     height: 70%;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
 .view{
@@ -11,7 +13,7 @@ body{
   width: 96%;
   top:10%;
   left: 2%;
-  border:1px solid black;
+  border:1px solid #76a1e0;
 }
 
 .box1{
@@ -22,7 +24,7 @@ body{
     top: 10px;
     left: 10px;
     display: block;
-    border:1px solid black;
+    border:1px solid #76a1e0;
     border-radius: 8px 8px 8px 8px;
 }
 
@@ -30,6 +32,7 @@ body{
     color:white;
     font-size: 20px;
     position: absolute;
+    
     
 }
 
@@ -99,3 +102,19 @@ body{
     height:5%;
 }
 
+
+input{
+    display: none;  
+}
+
+.option{
+    border:1px solid black;
+    width: 200px;
+    height:auto;
+    text-align: center;
+    background:linear-gradient(to right, #81d8f6 , #2867be);
+    margin-left: 800px;
+    margin-top: 300px;
+    display: none;
+   
+}

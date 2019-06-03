@@ -16,7 +16,7 @@
     <div class="wrap" id="move" ondrop="drop(event)" ondragover="allowDrop(event)">
         <div class="box1" id="box" draggable="true" ondragstart="drag(event)">
 
-            &nbsp;&nbsp;<small><i class="fab fa-windows" style="color:white">&nbsp;</i>Main window</small>
+            &nbsp;&nbsp;<i class="fab fa-windows" style="color:white">&nbsp;</i><small>Main window</small>
             <i class="fas fa-minus"></i>
             <i class="fas fa-window-maximize"></i>
             <i class="fas fa-window-close"></i>
@@ -25,7 +25,11 @@
             <div class="view">
             </div>
         </div>
-       
+       <div class="option">
+          Change background
+       </div>
+
+       <input type="file" class="menu" onchange="preview_file()">
     </div>
     <script src="script.js"></script>
 
