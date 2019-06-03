@@ -1,5 +1,5 @@
 body{
-    background:linear-gradient(to right, #81d8f6 , #2867be); 
+    background:#9eacc1; 
     width: 70%;
     height: 70%;
 }
@@ -23,16 +23,17 @@ body{
     left: 10px;
     display: block;
     border:1px solid black;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 8px 8px 8px 8px;
 }
 
 .fas{
     color:white;
     font-size: 20px;
     position: absolute;
+    
 }
 
-.fa-caret-up{
+/* .fa-caret-up{
     left: calc(50% - 10px);
 }
 .fa-caret-left {
@@ -57,7 +58,7 @@ body{
 
     left: calc(50% - 15px);
 
-}
+} */
 
 .drop{
     position: absolute;
@@ -87,3 +88,14 @@ body{
     right:5px;
     color:white;
 }
+.fa-compress{
+    right:35px;
+    
+}
+
+.minimize{
+    top:90%;
+    left:0%;
+    height:5%;
+}
+
